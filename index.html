@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ChatGPT test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.03.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2023.03.1/pyscript.js"></script>
+</head>
+<body>
+    <py-config src="./pyscript.toml"></py-config>
+    
+    <!-- UI -->
+    <div id="div1" class="container">
+        <div class="section">
+            <h4 class="title is-4">
+                Welcome to my ChatGPT Chat!
+            </h4>
+            <p>Type the kind of chatbot you'd like to chat with, <br>
+                then you can chat with it!</p>
+
+            <br>
+            <input  id="userInput" 
+                    type="text" 
+                    class="input is-info" 
+                    placeholder="message"></input>
+            <br>
+            
+            <button  id="submit-guess-btn"
+                        class="button is-primary mt-3"
+                        type="submit" 
+                        py-click="send()">Send</button>
+        </div>
+
+    </div>
+
+    <py-script src="./main.py"></py-script>
+
+</body>
+</html>
